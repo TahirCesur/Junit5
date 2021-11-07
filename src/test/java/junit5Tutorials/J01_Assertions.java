@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class J01_Assertions {
+public class J01_Assertions {
 
     @Test
     @DisplayName("ToAssert testi")
