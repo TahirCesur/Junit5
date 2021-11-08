@@ -41,7 +41,7 @@ public class J04_ParametirezedTest {
 
     @ParameterizedTest(name = "(Expected)BUYUKHARF:{0},(actual)cevirilecek:{1}")//syntax
     //@ParameterizedTest  --> parametresi {} ile Expected:{0},actual:{1} yazılmalı..
-    @CsvFileSource(files ="/src/test/resource/data.csv",numLinesToSkip = 1)//numLinesToSkip = 1-->1 line 'daki değerleri atla
+    @CsvFileSource(resources ="/data.csv",numLinesToSkip = 1)//numLinesToSkip = 1-->1 line 'daki değerleri atla
 
     void upperCaseFromCsvFile(String kelime, String buyukHarf) {
         assertEquals(buyukHarf, kelime.toUpperCase());
