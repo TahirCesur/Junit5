@@ -21,11 +21,14 @@ class C02_StringChangeTest {
     void tearDown() {
         strChange=null;
         System.out.println("test verisi delete edildi");
+        System.out.println("          *****          ");
     }
 
     @ParameterizedTest
     @CsvSource(value={"BC,AABC","B,AB","BCDE,BCDE","'',AA","B,B"})
     void ilkIkiASil(String kirpilmis, String girdi) {
         assertEquals(kirpilmis,strChange.ilkIkiASil(girdi));
+
+        System.out.println("Ilk ikide olan A lar silindi");
     }
 }

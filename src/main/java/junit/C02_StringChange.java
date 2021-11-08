@@ -11,7 +11,7 @@ public class C02_StringChange {
         }
         String ilkIkiKarakter=str.substring(0,2); // 0 ve 1. karakter
         String ilkIkiKarakterSonrasi=str.substring(2); // 2 dahil kalanlar
-        return ilkIkiKarakter.replaceAll("A","")+ilkIkiKarakterSonrasi;
+        return ilkIkiKarakter.replaceAll("A","") + ilkIkiKarakterSonrasi;
 
 
     }
