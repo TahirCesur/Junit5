@@ -39,17 +39,17 @@ public class J04_ParametirezedTest {
 
     //CSV dosyası (Comma-Separated VariabIes) Virgülle ayrılmış değerler
 
-    @ParameterizedTest(name = "(Expected)BUYUKHARF:{0},(actual)cevirilecek:{1}")//syntax
-    //@ParameterizedTest  --> parametresi {} ile Expected:{0},actual:{1} yazılmalı..
-    @CsvFileSource(resources ="/data.csv",numLinesToSkip = 1)//numLinesToSkip = 1-->1 line 'daki değerleri atla
+    @ParameterizedTest(name = "(Expected)BUYUKHARF:{0},(actual)cevirilecek:{1}") // syntax
+    //@ParameterizedTest  --> parametresi {} ile Expected:{0},actual:{1} yazilmali..
+    @CsvFileSource(resources ="/data.csv",numLinesToSkip = 1)//numLinesToSkip = 1-->1 line 'daki degerleri atla
 
     void upperCaseFromCsvFile(String kelime, String buyukHarf) {
         assertEquals(buyukHarf, kelime.toUpperCase());
     }
 
     @ParameterizedTest
-    @CsvSource(value = {"HALUK,haluk","GULCAN,gulcan","HAKAN,hakan"})//passed
-    //@CsvSource(value = {"HALUK,haluk","GULCAN,gulcan","H@K@N,hakan"})//failed
+    @CsvSource(value = {"HALUK,haluk","GULCAN,gulcan","HAKAN,hakan"}) // passed
+    //@CsvSource(value = {"HALUK,haluk","GULCAN,gulcan","H@K@N,hakan"}) // failed
     void testBuyukHarfeCevir(String beklenenBuyukHarf , String isim){
         assertEquals(beklenenBuyukHarf, isim.toUpperCase());
 

@@ -10,7 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class C02_StringChangeTest {
     C02_StringChange strChange=new C02_StringChange();
-    // static olmayan class'dan method call etmek için obj creat edildi
+    // static olmayan class'dan method call etmek icin obj creat edildi
+
     @BeforeEach
     void setUp() {
         strChange=new C02_StringChange();
@@ -21,8 +22,6 @@ class C02_StringChangeTest {
         strChange=null;
         System.out.println("test verisi delete edildi");
     }
-
-
 
     @ParameterizedTest
     @CsvSource(value={"BC,AABC","B,AB","BCDE,BCDE","'',AA","B,B"})
