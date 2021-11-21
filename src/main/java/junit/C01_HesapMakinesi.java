@@ -12,7 +12,7 @@ public class C01_HesapMakinesi {
 
     static double carp(double... sayilar) {
 
-        return DoubleStream.of(sayilar).reduce(1,(a, b)->a*b);
+        return DoubleStream.of(sayilar).reduce(1, (a, b) -> a * b);
     }
 
 

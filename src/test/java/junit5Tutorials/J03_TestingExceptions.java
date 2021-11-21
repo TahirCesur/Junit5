@@ -61,7 +61,7 @@ public class J03_TestingExceptions {
     @DisplayName("ArithmeticException TEST")
     void testException4() {
         // assertThrows(ArithmeticException.class, () ->bol(3,2)); // failed
-        assertThrows(ArithmeticException.class, () ->bol(3,0)); // passed
+        assertThrows(ArithmeticException.class, () -> bol(3, 0)); // passed
 
     }
 

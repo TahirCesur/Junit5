@@ -40,7 +40,7 @@ public class J02_BeforeAfterEachAll {
      */
 
     @AfterAll
-    static void veritabaniBaglantiKapat(){
+    static void veritabaniBaglantiKapat() {
         System.out.println("@AfterAll --> Veritabani baglantisi kapatildi (NAMAZ SELAMI VERILDI)");
 
     }

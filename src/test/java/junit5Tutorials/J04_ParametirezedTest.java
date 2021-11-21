@@ -28,7 +28,8 @@ public class J04_ParametirezedTest {
 
     // TEKİL ŞART
     @ParameterizedTest
-    @ValueSource(strings = {"haluk", "salih", "yagmur", "gülcan"}) // passed
+    @ValueSource(strings = {"haluk", "salih", "yagmur", "gülcan"})
+    // passed
     // @ValueSource(strings = {"haluk", "salih", "yagmur","", "gülcan"}) // failed
 
     void uzunlukSifirdanBuyukParametreli(String str) { // parametre elemanları (strings)method döngüye atıp run ediyor
@@ -41,16 +42,18 @@ public class J04_ParametirezedTest {
 
     @ParameterizedTest(name = "(Expected)BUYUKHARF:{0},(actual)cevirilecek:{1}") // syntax
     //@ParameterizedTest  --> parametresi {} ile Expected:{0},actual:{1} yazilmali..
-    @CsvFileSource(resources ="/data.csv",numLinesToSkip = 1)//numLinesToSkip = 1-->1 line 'daki degerleri atla
+    @CsvFileSource(resources = "/data.csv", numLinesToSkip = 1)
+//numLinesToSkip = 1-->1 line 'daki degerleri atla
 
     void upperCaseFromCsvFile(String kelime, String buyukHarf) {
         assertEquals(buyukHarf, kelime.toUpperCase());
     }
 
     @ParameterizedTest
-    @CsvSource(value = {"HALUK,haluk","GULCAN,gulcan","HAKAN,hakan"}) // passed
-    //@CsvSource(value = {"HALUK,haluk","GULCAN,gulcan","H@K@N,hakan"}) // failed
-    void testBuyukHarfeCevir(String beklenenBuyukHarf , String isim){
+    @CsvSource(value = {"HALUK,haluk", "GULCAN,gulcan", "HAKAN,hakan"})
+        // passed
+        //@CsvSource(value = {"HALUK,haluk","GULCAN,gulcan","H@K@N,hakan"}) // failed
+    void testBuyukHarfeCevir(String beklenenBuyukHarf, String isim) {
         assertEquals(beklenenBuyukHarf, isim.toUpperCase());
 
     }
